@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:vendor/Screens/vendor_login.dart';
-import 'package:vendor/Screens/vendor_register.dart';
+import 'package:vendor/Screens/vendor_home.dart';
+import 'Screens/vendor_login.dart';
 
 void main() {
-  runApp(const Vendor());
+  runApp(const VendorApp());
 }
 
-class Vendor extends StatelessWidget {
-  const Vendor({super.key});
+class VendorApp extends StatelessWidget {
+  const VendorApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Vendor App',
-      home: const VendorLoginScreen(),
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        scaffoldBackgroundColor: const Color(0xFFF6F6F6),
+      ),
+      home: const VendorHomeScreen(),
     );
   }
 }
-
